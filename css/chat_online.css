@@ -1,0 +1,116 @@
+/* CSS da página "chat_online.html" */
+
+body{
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+.middle{
+	margin: 0 auto;
+	vertical-align: middle;
+}
+
+.center{
+	height: 56px;
+    padding: 10px 24px;
+}
+
+#user-email{
+	display: block;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#user-photo {
+	width:40px;
+	height:40px;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+
+#user-links{
+	text-align:right
+}
+
+.navbar-header:after,  .modal-footer:after{
+    display: inline;
+}
+
+.right{
+	float: right;
+}
+
+a{
+	text-decoration: none;
+	color: #AEAEAE !important;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.link-top-menu-bar{
+	margin-right:5px;
+}
+.container-fluid{
+	background-color:#A2D1FF;
+	padding:0px;
+}
+
+.scroll{
+	overflow-y: scroll;
+	width: 100%;
+	height: 70%;
+	background-color:#f1f1f1;
+	margin-bottom: 5px;
+}
+
+#user-info{
+	display:none;
+}
+
+#chat{
+	display:none;
+}
+
+#members{
+	display:none;
+}
+
+footer:before{
+	display: inline;
+}
+
+.box-father{
+	margin-top: 35px;
+}
+
+.box-son{
+	height: 400px;
+	border: 1px solid;
+	border-color: #AEAEAE;
+}
+
+.col-md-4{
+	border-left: 0px;
+}
+
+.form-control{
+	width:100%;
+}
+
+.name{
+	margin-top: 17px;
+	margin-bottom: 17px;
+	margin-left: 15px;
+	font-weight: bold;
+}
+
+.owner{
+	font-weight: bold;
+}
+
+footer{
+	text-align:center;
+}
+
