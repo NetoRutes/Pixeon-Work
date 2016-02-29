@@ -1,0 +1,100 @@
+@(message: String)
+
+@main("Pixeon") {
+<div ng-app="myApp">
+    <nav id="top-menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container middle">
+            <div class="navbar-header">
+                <img src="assets/images/top_menu_icon.png" class='navbar-brand'>
+                <span class="navbar-brand" href="" >Chat Online</span>
+            </div>
+            <div>
+                <div class="navbar-header center right">
+                    <span class="right" href="https://myaccount.google.com/"  data-label="User avatar">
+                        <img id="user-photo" src="assets/images/user_photo.jpg" class="devsite-avatar">
+                    </span>
+                    <div id="user-info">
+                        <div class="right">
+                            <a href="https://myaccount.google.com/" id="user-name" data-label="User name"></a>
+                        </div>
+
+                        <div class="right" id="user-links">
+                            <a href="" data-category="Site-Wide Custom Events" id="link-bord" data-label="Change account">Trocar a conta</a>
+                            <a>|</a>
+                            <a href="https://www.google.com/accounts/Logout" data-category="Site-Wide Custom Events" data-label="Sign out button">Sair</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div ng-controller="ctrl">
+        <div class="container-fluid">
+            <div class="container" >
+                <h1 class="col-md-8">Desafio técnico Pixeon</h1>
+                <button class="btn-success right col-md-2" id="btn-sign-chat" ng-click="login()">Entrar no Chat</button>
+                <button class="btn-default right col-md-2" id="btn-leave-chat" ng-click="logout()">Sair no Chat</button>
+            </div>
+        </div>
+
+        <div id="center-menu-login" class=" box-father">
+            <div class="user">
+                <img id="user-perfil" src="assets/images/user_photo.jpg">
+                <h1 class="welcome">Olá, <span id="visitante-name">visitante</span>!</h1>
+            </div>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="370" data-height="50" data-longtitle="true"></div>
+        </div>
+
+
+       <div class="container box-father">
+           <div id="chat" class="row">
+               <div class="col-md-8 box-son">
+                   <h2>Conversa</h2>
+                   <div class="col-md-8 scroll" >
+                       <div ng-repeat="msg in msgs">
+                           <span class="owner">{{msg.user}}</span><span class="msg">{{msg.txt}}</span>
+                           <br/>
+                       </div>
+                   </div>
+
+                   <div class="panel-footer">
+                       <div class="input-group">
+                           <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Escreva sua mensagem aqui..." ng-model="textMsg" />
+                           <span class="input-group-btn">
+                               <button class="btn btn-primary btn-sm" id="btn-chat" ng-click="sendMsg()">Enviar</button>
+                           </span>
+                       </div>
+                   </div>
+
+               </div>
+
+               <div id="members" class="col-md-4 box-son">
+                   <h2>Participantes</h2>
+                   <div class="scroll">
+                       <table class="name" style="width:90%">
+                           <tr ng-repeat="user in people" class="particip-tr">
+                               <td id="{{user.id}}" style="float:left">
+                                   {{user.name}}
+                               </td>
+                               <td class="right">
+                                   <span>
+                                    <img class="user-photo-particp" src="{{user.img}}">
+                                </span>
+                               </td>
+                           </tr>
+                       </table>
+                   </div>
+
+               </div>
+           </div>
+       </div>
+    </div>
+
+   <br/>
+   <hr>
+
+   <footer>
+       <p>&copy; Wellington Dyon Fuck Rutes 2016</p>
+   </footer>
+</div>
+}
